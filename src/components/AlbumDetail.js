@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Text } from "react-native";
 import Card from "./Card";
+import CardSection from "./CardSection";
 
 class AlbumDetail extends Component {
   render() {
@@ -8,7 +9,9 @@ class AlbumDetail extends Component {
 
     return (
       <Card>
-        <Text>{title}</Text>
+        <CardSection>
+          <Text>{title}</Text>
+        </CardSection>
       </Card>
     );
   }
