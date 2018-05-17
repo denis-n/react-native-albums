@@ -5,9 +5,9 @@ import Header from "./src/components/Header";
 export default class App extends React.Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Header />
-      </View>
+      // <View style={styles.container}>
+      // </View>
+      <Header headerText="Albums" />
     );
   }
 }
