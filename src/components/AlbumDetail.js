@@ -1,10 +1,14 @@
 import React, { Component } from "react";
-import { Text, View, Image, StyleSheet } from "react-native";
+import { Text, View, Image, StyleSheet, Linking } from "react-native";
 import Card from "./Card";
 import CardSection from "./CardSection";
 import Button from "./Button";
 
 class AlbumDetail extends Component {
+  gotoLink(url) {
+    Linking.openURL(url);
+  }
+
   render() {
     const { title, artist, url, image, thumbnail_image } = this.props.album;
 
@@ -28,7 +32,7 @@ class AlbumDetail extends Component {
         </CardSection>
 
         <CardSection>
-          <Button />
+          <Button onClick={() => this.gotoLink(url)}>Buy Now!</Button>
         </CardSection>
       </Card>
     );
